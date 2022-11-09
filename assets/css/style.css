@@ -93,12 +93,35 @@ section#projects div.content a:hover {
   color: #fff;
 }
 
+section#contact {
+  transform: translateY(70px);
+  margin: -70px;
+}
+section#contact div.content {
+  background-color: rgb(41, 52, 52);
+  max-width: 900px;
+  color: #fff;
+  min-height: 150px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 30px;
+}
+section#contact div.content h2 {
+  text-align: center;
+  font-size: 30px;
+}
+section#contact div.content p {
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
+
 footer {
   min-height: 260px;
   border-top: 20px solid #7e42df;
   background-color: #6b2ccf;
   text-align: center;
-  padding: 80px;
+  padding: 250px 80px 80px;
 }
 footer p {
   font-size: 20px;
