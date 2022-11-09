@@ -14,4 +14,18 @@ section.header h1 {
 section.header p {
   font-size: 23px;
   font-weight: 300;
+}
+
+section.intro {
+  border-top: 20px solid #7e42df;
+  background-color: #6b2ccf;
+  margin: 50px 0;
+}
+section.intro div.content {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
