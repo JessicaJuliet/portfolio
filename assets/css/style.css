@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+section.header {
+  text-align: center;
+  color: #141c3a;
+  max-width: 700px;
+  margin: 0 auto;
+}
+section.header h1 {
+  font-size: 40px;
+}
+section.header p {
+  font-size: 23px;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */
