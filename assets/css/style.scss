@@ -1,5 +1,10 @@
+html {
+    height: 100%;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
 }
 
 section#header {
@@ -37,11 +42,11 @@ section#skills {
             grid-column-gap: 10px;
             grid-template-columns: repeat(3, 1fr);
             text-align: center;
-            position: relative;
+            // position: relative;
             transform: translateY(-140px);
-            margin-bottom: -140px; //off-set transform
             max-width: 90%;
             margin: 0 auto;
+            margin-bottom: -140px; //off-set transform
             .grid-item {
                 background-color: #fff;
                 min-height: 450px;
@@ -50,8 +55,51 @@ section#skills {
                 padding: 15px;
                 h3 {
                     font-weight: 600;
-                    font-size: 20px;
+                    font-size: 24px;
                 }
+            }
+        }
+    }
+}
+
+section#projects {
+    div.content {
+        padding-top: 80px;
+        text-align: center;
+        h2 {
+            text-align: center;
+            color: #141c3a;
+            font-size: 30px;
+        }
+        p {
+            text-align: center;
+            font-weight: 300;
+        }
+        div.grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 50px;
+            grid-row-gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 50px;
+            div.grid-item {
+                border: .5px solid rgba(128, 128, 128, 0.322);
+                padding: 50px 35px;
+                border-radius: 5px;
+                min-height: 200px;
+            }
+        }
+        a {
+            margin: 0 auto;
+            border: 2px solid #6b2ccf;
+            border-radius: 40px;
+            padding: 15px 30px;
+            color: #6b2ccf;
+            text-decoration: none;
+            &:hover {
+                background-color: #6b2ccf;
+                color: #fff;
             }
         }
     }

@@ -1,5 +1,10 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
 }
 
 section#header {
@@ -35,11 +40,10 @@ section#skills div.content div.grid {
   grid-column-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
-  position: relative;
   transform: translateY(-140px);
-  margin-bottom: -140px;
   max-width: 90%;
   margin: 0 auto;
+  margin-bottom: -140px;
 }
 section#skills div.content div.grid .grid-item {
   background-color: #fff;
@@ -50,5 +54,46 @@ section#skills div.content div.grid .grid-item {
 }
 section#skills div.content div.grid .grid-item h3 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
+}
+
+section#projects div.content {
+  padding-top: 80px;
+  text-align: center;
+}
+section#projects div.content h2 {
+  text-align: center;
+  color: #141c3a;
+  font-size: 30px;
+}
+section#projects div.content p {
+  text-align: center;
+  font-weight: 300;
+}
+section#projects div.content div.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+section#projects div.content div.grid div.grid-item {
+  border: 0.5px solid rgba(128, 128, 128, 0.322);
+  padding: 50px 35px;
+  border-radius: 5px;
+  min-height: 200px;
+}
+section#projects div.content a {
+  margin: 0 auto;
+  border: 2px solid #6b2ccf;
+  border-radius: 40px;
+  padding: 15px 30px;
+  color: #6b2ccf;
+  text-decoration: none;
+}
+section#projects div.content a:hover {
+  background-color: #6b2ccf;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
