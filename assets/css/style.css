@@ -27,6 +27,8 @@ section#intro div.content {
   padding-top: 80px;
   padding-bottom: 150px;
   font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 section#skills div.content div.grid {
