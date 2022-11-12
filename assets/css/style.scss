@@ -2,6 +2,23 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#nav {
+    padding-right: 30px;
+    margin-bottom: 100px;
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .content {
+        padding: 20px 0;
+        a {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            color: #141c3a;
+            padding-left: 30px;
+        }
+    }
+}
+
 section#header {
     text-align: center;
     color: #141c3a;
