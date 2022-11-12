@@ -18,7 +18,7 @@ body {
   margin-left: 30px;
   margin-bottom: 3px;
 }
-#nav .content a.active {
+#nav .content a:hover {
   border-bottom: 3px solid #141c3a;
   padding-bottom: 5px;
 }

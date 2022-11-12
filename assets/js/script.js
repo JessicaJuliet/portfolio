@@ -1,5 +1,5 @@
 
-function activeNavItem() {
+/* function activeNavItem() {
     var navItem = document.querySelectorAll(".nav-item");
     for (let i = 0; i < navItem.length; i++) {
         navItem[i].addEventListener("click", function() {
@@ -9,4 +9,4 @@ function activeNavItem() {
         });
     }
 }
-activeNavItem();
+activeNavItem(); */
