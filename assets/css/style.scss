@@ -5,7 +5,6 @@ body {
 #nav {
     padding-right: 30px;
     margin-bottom: 100px;
-    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     .content {
         padding: 20px 0;
         a {
@@ -164,7 +163,7 @@ section#contact {
             text-align: center;
             div {
                 display: flex;
-                width: 400px;
+                max-width: 400px;
                 margin: 0 auto;
                 input {
                     width: 100%
@@ -231,5 +230,51 @@ footer {
         text-align: center;
         font-weight: 300;
         padding-top: 20px;
+    }
+}
+
+
+
+
+
+// Media Queries
+
+// Mobile screens
+@media only screen and (max-width: 480px) {
+
+    #nav {
+        margin-bottom: 0;
+    }
+
+    section#header {
+        padding: 20px;
+    }
+
+    section#intro {
+        div.content {
+            padding: 50px 20px 100px 20px;
+            font-size: 18px;
+        }
+    }
+
+    section#skills {
+        div.content {
+            div.grid {
+                grid-template-columns: 1fr;
+                div.grid-item {
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    section#projects {
+        div.content {
+            div.grid {
+                grid-template-columns: 1fr;
+                margin: 0 auto;
+                grid-gap: 20px;
+            }
+        }
     }
 }

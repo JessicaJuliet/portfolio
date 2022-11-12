@@ -160,7 +160,7 @@ section#contact div.content form {
 }
 section#contact div.content form div {
   display: flex;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
 }
 section#contact div.content form div input {
@@ -234,4 +234,28 @@ footer p {
   text-align: center;
   font-weight: 300;
   padding-top: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  #nav {
+    margin-bottom: 0;
+  }
+  section#header {
+    padding: 20px;
+  }
+  section#intro div.content {
+    padding: 50px 20px 100px 20px;
+    font-size: 18px;
+  }
+  section#skills div.content div.grid {
+    grid-template-columns: 1fr;
+  }
+  section#skills div.content div.grid div.grid-item {
+    width: 75%;
+  }
+  section#projects div.content div.grid {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    grid-gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
