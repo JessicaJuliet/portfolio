@@ -239,7 +239,7 @@ footer {
 
 // Media Queries
 
-// Mobile screens
+// Mobile screens, xs/s
 @media only screen and (max-width: 480px) {
 
     #nav {
@@ -274,6 +274,41 @@ footer {
                 grid-template-columns: 1fr;
                 margin: 0 auto;
                 grid-gap: 20px;
+            }
+        }
+    }
+}
+
+
+
+// Tablet screens, medium
+@media only screen and (max-width: 768px) {
+
+    section#intro {
+        div.content {
+            padding: 50px 30px 120px 30px;
+            font-size: 18px;
+        }
+    }
+
+    section#skills {
+        div.content {
+            div.grid {
+                grid-template-columns: 1fr;
+                div.grid-item {
+                    width: 65%;
+                }
+            }
+        }
+    }
+
+    section#projects {
+        div.content {
+            div.grid {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 0 auto;
+                grid-gap: 20px;
+                padding-top: 30px;
             }
         }
     }
