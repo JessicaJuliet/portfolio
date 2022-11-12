@@ -32,26 +32,46 @@ section#intro {
 }
 
 section#skills {
+    max-width: 80%;
+    margin: 0 auto;
     div.content {
         div.grid {
             display: grid;
-            grid-column-gap: 10px;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
             text-align: center;
-            // position: relative;
             transform: translateY(-140px);
-            max-width: 90%;
-            margin: 0 auto;
             margin-bottom: -140px; //off-set transform
+            justify-items: center;
             .grid-item {
+                width: 70%;
                 background-color: #fff;
-                min-height: 450px;
+                min-height: 430px;
                 border: .5px solid rgba(207, 206, 206, 0.281);
                 border-radius: 5px;
-                padding: 15px;
+                padding: 30px 60px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 h3 {
                     font-weight: 600;
                     font-size: 24px;
+                }
+                h4 {
+                    font-size: 18px;
+                    color: #6b2ccf;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                ul {
+                    padding-left: 0;
+                    li {
+                        list-style-type: none;
+                        padding-left: 0;
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
                 }
             }
         }

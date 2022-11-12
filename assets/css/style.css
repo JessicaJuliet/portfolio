@@ -31,26 +31,49 @@ section#intro div.content {
   font-weight: 300;
 }
 
+section#skills {
+  max-width: 80%;
+  margin: 0 auto;
+}
 section#skills div.content div.grid {
   display: grid;
-  grid-column-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
   text-align: center;
   transform: translateY(-140px);
-  max-width: 90%;
-  margin: 0 auto;
   margin-bottom: -140px;
+  justify-items: center;
 }
 section#skills div.content div.grid .grid-item {
+  width: 70%;
   background-color: #fff;
-  min-height: 450px;
+  min-height: 430px;
   border: 0.5px solid rgba(207, 206, 206, 0.281);
   border-radius: 5px;
-  padding: 15px;
+  padding: 30px 60px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 section#skills div.content div.grid .grid-item h3 {
   font-weight: 600;
   font-size: 24px;
+}
+section#skills div.content div.grid .grid-item h4 {
+  font-size: 18px;
+  color: #6b2ccf;
+  font-weight: 400;
+}
+section#skills div.content div.grid .grid-item p {
+  font-size: 18px;
+  line-height: 28px;
+}
+section#skills div.content div.grid .grid-item ul {
+  padding-left: 0;
+}
+section#skills div.content div.grid .grid-item ul li {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 section#projects div.content {
