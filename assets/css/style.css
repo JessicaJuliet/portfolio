@@ -97,35 +97,42 @@ section#skills div.content div.grid .grid-item ul li {
   line-height: 28px;
 }
 
-section#projects div.content {
+section#projects div.content, section#work div.content {
   padding-top: 80px;
-  padding-bottom: 80px;
   text-align: center;
 }
-section#projects div.content h2 {
+section#projects div.content h2, section#work div.content h2 {
   text-align: center;
   color: #141c3a;
   font-size: 30px;
 }
-section#projects div.content p {
+section#projects div.content p, section#work div.content p {
   text-align: center;
   font-weight: 300;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 25px;
 }
-section#projects div.content div.grid {
+section#projects div.content div.grid, section#work div.content div.grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
   max-width: 900px;
   margin: 50px auto 100px 50px;
 }
-section#projects div.content div.grid div.grid-item {
+section#projects div.content div.grid div.grid-item, section#work div.content div.grid div.grid-item {
   border: 0.5px solid rgba(128, 128, 128, 0.322);
-  padding: 50px 35px;
   border-radius: 5px;
-  min-height: 200px;
+  height: 250px;
+  max-width: 300px;
+  overflow: hidden;
 }
-section#projects div.content a {
+section#projects div.content div.grid div.grid-item img, section#work div.content div.grid div.grid-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+section#projects div.content a, section#work div.content a {
   margin: 0 auto;
   border: 2px solid #6b2ccf;
   border-radius: 40px;
@@ -133,9 +140,13 @@ section#projects div.content a {
   color: #6b2ccf;
   text-decoration: none;
 }
-section#projects div.content a:hover {
+section#projects div.content a:hover, section#work div.content a:hover {
   background-color: #6b2ccf;
   color: #fff;
+}
+
+section#work div.content {
+  padding-top: 0;
 }
 
 section#contact {

@@ -99,10 +99,9 @@ section#skills {
     }
 }
 
-section#projects {
+section#projects, section#work {
     div.content {
         padding-top: 80px;
-        padding-bottom: 80px;
         text-align: center;
         h2 {
             text-align: center;
@@ -112,19 +111,26 @@ section#projects {
         p {
             text-align: center;
             font-weight: 300;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 25px;
         }
         div.grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 50px;
-            grid-row-gap: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 20px;
             max-width: 900px;
             margin: 50px auto 100px 50px;
             div.grid-item {
                 border: .5px solid rgba(128, 128, 128, 0.322);
-                padding: 50px 35px;
                 border-radius: 5px;
-                min-height: 200px;
+                height: 250px;
+                max-width: 300px;
+                overflow: hidden;
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
             }
         }
         a {
@@ -142,9 +148,14 @@ section#projects {
     }
 }
 
+
+section#work {
+    div.content {
+        padding-top: 0;
+    }
+}
+
 section#contact {
-    // transform: translateY(70px);
-    // margin: -70px;
     padding-top: 80px;
     padding-bottom: 80px;
     div.content {
