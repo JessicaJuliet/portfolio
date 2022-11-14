@@ -10,3 +10,21 @@
     }
 }
 activeNavItem(); */
+
+
+var overlay = document.getElementById("overlay");
+console.log(overlay);
+
+// overlay.onmouseover = function() {
+//   console.log("Mouse over!");
+//   this.style.display= "block";
+// }
+
+// Project work overlay
+function overlayOn() {
+  overlay.style.display= "block";
+}
+
+function overlayOff() {
+  overlay.style.display= "none";
+}

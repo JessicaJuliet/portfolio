@@ -115,22 +115,96 @@ section#projects div.content p, section#work div.content p {
 }
 section#projects div.content div.grid, section#work div.content div.grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  max-width: 900px;
-  margin: 50px auto 100px 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 70%;
 }
 section#projects div.content div.grid div.grid-item, section#work div.content div.grid div.grid-item {
+  position: relative;
   border: 0.5px solid rgba(128, 128, 128, 0.322);
   border-radius: 5px;
-  height: 250px;
-  max-width: 300px;
+  height: 100%;
+  width: auto;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 section#projects div.content div.grid div.grid-item img, section#work div.content div.grid div.grid-item img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-position: left;
+     object-position: left;
+}
+section#projects div.content div.grid div.grid-item .skill-pills, section#work div.content div.grid div.grid-item .skill-pills {
+  display: none;
+}
+section#projects div.content div.grid div.grid-item:hover .overlay, section#work div.content div.grid div.grid-item:hover .overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.838);
+  z-index: 2;
+  cursor: pointer;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills, section#work div.content div.grid div.grid-item:hover .skill-pills {
+  position: absolute;
+  display: block;
+  padding-top: 50px;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills h3, section#work div.content div.grid div.grid-item:hover .skill-pills h3 {
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  margin: 0;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills ul, section#work div.content div.grid div.grid-item:hover .skill-pills ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills .website-link, section#work div.content div.grid div.grid-item:hover .skill-pills .website-link {
+  margin: 0;
+  background-color: #6b2ccf;
+  color: #fff;
+  width: 100px;
+  padding: 10px 30px;
+  margin-left: 20px;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills .website-link a, section#work div.content div.grid div.grid-item:hover .skill-pills .website-link a {
+  min-width: 50px;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills .website-link:hover, section#work div.content div.grid div.grid-item:hover .skill-pills .website-link:hover {
+  font-weight: 600;
+}
+section#projects div.content div.grid div.grid-item:hover .skill-pills .pill, section#work div.content div.grid div.grid-item:hover .skill-pills .pill {
+  background-color: #252540;
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 section#projects div.content a, section#work div.content a {
   margin: 0 auto;
