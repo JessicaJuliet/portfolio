@@ -77,12 +77,12 @@ section#skills div.content div.grid .grid-item {
   padding: 30px 60px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-section#skills div.content div.grid .grid-item h3 {
+section#skills div.content div.grid .grid-item h2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
 }
-section#skills div.content div.grid .grid-item h4 {
-  font-size: 18px;
+section#skills div.content div.grid .grid-item h3 {
+  font-size: 20px;
   color: #6b2ccf;
   font-weight: 400;
 }
