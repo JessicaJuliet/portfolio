@@ -68,6 +68,7 @@ section#skills {
             margin-bottom: -140px; //off-set transform
             justify-items: center;
             .grid-item {
+                max-width: 400px;
                 width: 70%;
                 background-color: #fff;
                 min-height: 430px;
@@ -86,7 +87,7 @@ section#skills {
                 }
                 p {
                     font-size: 18px;
-                    line-height: 28px;
+                    line-height: 1.5;
                 }
                 ul {
                     padding-left: 0;
@@ -94,7 +95,7 @@ section#skills {
                         list-style-type: none;
                         padding-left: 0;
                         font-size: 18px;
-                        line-height: 28px;
+                        line-height: 1.5;
                     }
                 }
             }
@@ -102,26 +103,26 @@ section#skills {
     }
 }
 
-section#projects, section#work {
+section#projects {
     div.content {
         padding-top: 80px;
         text-align: center;
         h2 {
             text-align: center;
-            color: #141c3a;
-            font-size: 30px;
+            font-size: 26px;
+            font-weight: 600;
         }
         p {
             text-align: center;
-            font-weight: 300;
             max-width: 400px;
             margin: 0 auto;
-            line-height: 25px;
+            line-height: 1.5;
+            font-size: 18px;
         }
         div.grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 40px;
+            grid-column-gap: 60px;
             grid-row-gap: 40px;
             margin: 0 auto;
             padding-top: 50px;
@@ -133,7 +134,7 @@ section#projects, section#work {
                 height: 100%;
                 width: auto;
                 overflow: hidden;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 img {
                     position: relative;
                     object-fit: cover;
@@ -142,7 +143,7 @@ section#projects, section#work {
                     z-index: 1;
                     object-position: left;
                 }
-                .skill-pills {
+                .project-links {
                     display: none;
                 }
                 &:hover {
@@ -155,14 +156,13 @@ section#projects, section#work {
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        background-color: rgba(0, 0, 0, 0.838);
+                        background-color: rgba(0, 0, 0, 0.671);
                         z-index: 2;
                         cursor: pointer;
                     }
-                    .skill-pills {
+                    .project-links {
                         position: absolute;
-                        // left: 25%;
-                        // right: 25%;
+                        top: 35%;
                         display: block;
                         padding-top: 50px;
                         z-index: 3;
@@ -170,19 +170,6 @@ section#projects, section#work {
                         text-align: center;
                         width: 100%;
                         margin: 0 auto;
-                        h3 {
-                            border-bottom: 2px solid #fff;
-                            display: inline-block;
-                            margin: 0;
-                        }
-                        ul {
-                            list-style: none;
-                            text-align: center;
-                            padding: 0;
-                            line-height: 1.7;
-                            margin-bottom: 40px;
-                            font-weight: 500;
-                        }
                         .website-link {
                             margin: 0;
                             background-color: #6b2ccf;
@@ -197,21 +184,20 @@ section#projects, section#work {
                                 font-weight: 600;
                             }
                         }
-                        .pill {
-                            background-color: #252540;
-                            width: 100px;
-                            border-radius: 5px;
-                            border: 1px solid #fff;
-                            color: #fff;
-                            font-weight: 400;
-                            padding: 10px;
-                            margin-bottom: 15px;
-                            text-transform: uppercase;
-                            font-size: 12px;
-                        }
+                    }
+                } // end :hover
+
+            } // end grid-item
+            div.project-description {
+                font-weight: 300;
+                font-size: 14px;
+                margin-bottom: 50px;
+                p {
+                    text-align: left;
+                    span {
+                        font-weight: 400;
                     }
                 }
-
             }
         }
         a {
