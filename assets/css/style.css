@@ -32,6 +32,9 @@ section#header {
 section#header h1 {
   font-size: 40px;
 }
+section#header h1 span {
+  font-weight: 300;
+}
 section#header p {
   font-size: 23px;
   font-weight: 300;
