@@ -1,30 +1,9 @@
+// Index js
 
-/* function activeNavItem() {
-    var navItem = document.querySelectorAll(".nav-item");
-    for (let i = 0; i < navItem.length; i++) {
-        navItem[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-        });
-    }
-}
-activeNavItem(); */
+const hamburgerIcon = document.getElementById("hamburger-icon");
+var navMenu = document.getElementById("nav");
 
-
-var overlay = document.getElementById("overlay");
-console.log(overlay);
-
-// overlay.onmouseover = function() {
-//   console.log("Mouse over!");
-//   this.style.display= "block";
-// }
-
-// Project work overlay
-function overlayOn() {
-  overlay.style.display= "block";
-}
-
-function overlayOff() {
-  overlay.style.display= "none";
-}
+// Toggle nav menu
+hamburgerIcon.addEventListener("click", function() {
+  navMenu.classList.toggle("active");
+})

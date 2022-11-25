@@ -2,12 +2,48 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#hamburger-menu {
-    padding: 10px;
+.hamburger {
+    background-color: #fff;
+    #hamburger-icon {
+        padding: 10px;
+        z-index: 4;
+        display: block;
+        position: fixed;
+    }
 }
+
 
 #nav {
     display: none; // Hide on mobile
+    padding-right: 30px;
+    margin-bottom: 100px;
+    &.active {
+        display: block; // Show on hamburger click
+    }
+    &.overlay {
+        transition: 1.5s;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        .content {
+            display: grid;
+            padding-top: 100px;
+            row-gap: 30px;
+            a {
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: none;
+                color: #141c3a;
+                margin-left: 20px;
+                margin-bottom: 3px;
+            }
+        }
+    }
 }
 
 section#header {
@@ -17,6 +53,7 @@ section#header {
     margin: 0 auto;
     h1 {
         font-size: 40px;
+        margin-top: 80px;
         span {
             font-weight: 300;
         }
@@ -387,7 +424,7 @@ footer {
 
 @media only screen and (min-width: 1119px) {
 
-    #hamburger-menu {
+    #hamburger-icon {
         display: none;
     }
 
