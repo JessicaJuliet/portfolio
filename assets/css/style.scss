@@ -2,25 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#hamburger-menu {
+    padding: 10px;
+}
+
 #nav {
-    padding-right: 30px;
-    margin-bottom: 100px;
-    .content {
-        padding: 20px 0;
-        a {
-            font-size: 16px;
-            text-transform: uppercase;
-            font-weight: 600;
-            text-decoration: none;
-            color: #141c3a;
-            margin-left: 30px;
-            margin-bottom: 3px;
-            &:hover {
-                border-bottom: 3px solid #141c3a;
-                padding-bottom: 5px;
-            }
-        }
-    }
+    display: none; // Hide on mobile
 }
 
 section#header {
@@ -398,7 +385,34 @@ footer {
 
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1119px) {
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    #nav {
+        display: block;
+        padding-right: 30px;
+        margin-bottom: 100px;
+        .content {
+            padding: 20px 0;
+            text-align: right;
+            a {
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: none;
+                color: #141c3a;
+                margin-left: 30px;
+                margin-bottom: 3px;
+                &:hover {
+                    border-bottom: 3px solid #141c3a;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
 
     section#skills {
         div.content {
