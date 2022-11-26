@@ -3,6 +3,7 @@ body {
 }
 
 .hamburger {
+  height: 50px;
   background-color: #fff;
 }
 .hamburger #hamburger-icon {
