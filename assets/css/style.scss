@@ -4,12 +4,16 @@ body {
 
 .hamburger {
     height: 50px;
+    width: 100%;
+    top: 0;
     background-color: #fff;
+    position: fixed;
+    z-index: 4;
     #hamburger-icon {
         padding: 10px;
         z-index: 4;
         display: block;
-        position: fixed;
+        position: relative;
     }
 }
 

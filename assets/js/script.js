@@ -7,3 +7,6 @@ var navMenu = document.getElementById("nav");
 hamburgerIcon.addEventListener("click", function() {
   navMenu.classList.toggle("active");
 })
+
+// Close nav menu on link click
+var navItem = document.querySelectorAll("#")
