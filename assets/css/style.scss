@@ -6,10 +6,11 @@ body {
     height: 50px;
     width: 100%;
     top: 0;
+    left: 0;
     background-color: #fff;
     position: fixed;
     z-index: 4;
-    #hamburger-icon {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    #hamburger-icon {
         padding: 10px;
         z-index: 4;
         display: block;
