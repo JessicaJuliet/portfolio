@@ -20,14 +20,12 @@ body {
 }
 
 #nav {
-  display: none;
+  display: block;
   padding-right: 30px;
   margin-bottom: 100px;
 }
-#nav.active {
-  display: block;
-}
-#nav.overlay {
+#nav .overlay {
+  display: none;
   transition: 1.5s;
   position: fixed;
   height: 100%;
@@ -37,12 +35,17 @@ body {
   left: 0;
   top: 0;
 }
-#nav.overlay .content {
-  display: grid;
+#nav .overlay.active {
+  display: block;
+}
+#nav .content {
   padding-top: 100px;
   row-gap: 30px;
 }
-#nav.overlay .content a {
+#nav .content.active {
+  display: grid;
+}
+#nav .content a {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
@@ -52,22 +55,25 @@ body {
   margin-bottom: 3px;
 }
 
-section#header {
+#header {
   text-align: center;
   color: #141c3a;
   max-width: 700px;
   margin: 0 auto;
 }
-section#header h1 {
+#header h1 {
   font-size: 40px;
   margin-top: 80px;
 }
-section#header h1 span {
+#header h1 span {
   font-weight: 300;
 }
-section#header p {
+#header p {
   font-size: 23px;
   font-weight: 300;
+}
+#header p br {
+  display: none;
 }
 
 section#intro {
@@ -388,30 +394,37 @@ footer p {
   }
 }
 @media only screen and (min-width: 1119px) {
-  #hamburger-icon {
+  .hamburger {
     display: none;
   }
   #nav {
-    display: block;
+    display: grid;
     padding-right: 30px;
     margin-bottom: 100px;
   }
+  #nav div.overlay {
+    display: none;
+  }
+  #nav div.overlay.active {
+    display: none;
+  }
   #nav .content {
-    padding: 20px 0;
+    display: inline-block;
+    grid-template-columns: repeat(4, 1fr);
     text-align: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    row-gap: 0;
   }
   #nav .content a {
     font-size: 16px;
-    text-transform: uppercase;
     font-weight: 600;
-    text-decoration: none;
-    color: #141c3a;
     margin-left: 30px;
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
-  #nav .content a:hover {
-    border-bottom: 3px solid #141c3a;
-    padding-bottom: 5px;
+  #header p br {
+    display: block;
   }
   section#skills div.content div.grid {
     grid-gap: 50px;
