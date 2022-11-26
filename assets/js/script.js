@@ -2,6 +2,8 @@
 
 const hamburgerIcon = document.getElementById("hamburger-icon");
 var navMenu = document.getElementById("nav");
+var navItem = document.querySelectorAll(".nav-item");
+
 
 // Toggle nav menu
 hamburgerIcon.addEventListener("click", function() {
@@ -9,4 +11,9 @@ hamburgerIcon.addEventListener("click", function() {
 })
 
 // Close nav menu on link click
-var navItem = document.querySelectorAll("#")
+for (let i = 0; i < navItem.length; i++){
+  // console.log(i);
+  navItem[i].addEventListener("click", function() {
+    navMenu.classList.toggle("active"); 
+  })
+}
