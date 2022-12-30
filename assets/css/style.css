@@ -76,11 +76,11 @@ body {
   display: none;
 }
 
-section#intro {
+#intro {
   background-color: #6b2ccf;
   margin: 50px 0;
 }
-section#intro div.content {
+#intro .content {
   max-width: 700px;
   margin: 0 auto;
   color: #fff;
@@ -91,11 +91,11 @@ section#intro div.content {
   font-weight: 300;
 }
 
-section#skills {
+#skills {
   max-width: 80%;
   margin: 0 auto;
 }
-section#skills div.content div.grid {
+#skills .content .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
@@ -104,7 +104,7 @@ section#skills div.content div.grid {
   margin-bottom: -140px;
   justify-items: center;
 }
-section#skills div.content div.grid .grid-item {
+#skills .content .grid .grid-item {
   max-width: 400px;
   width: 70%;
   background-color: #fff;
@@ -114,55 +114,54 @@ section#skills div.content div.grid .grid-item {
   padding: 30px 60px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-section#skills div.content div.grid .grid-item h2 {
+#skills .content .grid .grid-item h2 {
   font-weight: 600;
   font-size: 26px;
 }
-section#skills div.content div.grid .grid-item h3 {
+#skills .content .grid .grid-item h3 {
   font-size: 20px;
   color: #6b2ccf;
   font-weight: 400;
 }
-section#skills div.content div.grid .grid-item p {
+#skills .content .grid .grid-item p {
   font-size: 18px;
   line-height: 1.5;
 }
-section#skills div.content div.grid .grid-item ul {
+#skills .content .grid .grid-item ul {
   padding-left: 0;
 }
-section#skills div.content div.grid .grid-item ul li {
+#skills .content .grid .grid-item ul li {
   list-style-type: none;
   padding-left: 0;
   font-size: 18px;
   line-height: 1.5;
 }
 
-section#projects div.content {
+#projects .content {
   padding-top: 80px;
   text-align: center;
 }
-section#projects div.content h2 {
+#projects .content h2 {
   text-align: center;
   font-size: 26px;
   font-weight: 600;
 }
-section#projects div.content p {
+#projects .content p {
   text-align: center;
   max-width: 400px;
   margin: 0 auto;
   line-height: 1.5;
   font-size: 18px;
 }
-section#projects div.content div.grid {
+#projects .content .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 60px;
-  grid-row-gap: 40px;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
   margin: 0 auto;
   padding-top: 50px;
-  max-width: 70%;
+  max-width: 85%;
 }
-section#projects div.content div.grid div.grid-item {
+#projects .content .grid .grid-item .project {
   position: relative;
   border: 0.5px solid rgba(128, 128, 128, 0.322);
   border-radius: 5px;
@@ -171,7 +170,7 @@ section#projects div.content div.grid div.grid-item {
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-section#projects div.content div.grid div.grid-item img {
+#projects .content .grid .grid-item img {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -181,59 +180,21 @@ section#projects div.content div.grid div.grid-item img {
   -o-object-position: left;
      object-position: left;
 }
-section#projects div.content div.grid div.grid-item .project-links {
+#projects .content .grid .grid-item .project-links {
   display: none;
 }
-section#projects div.content div.grid div.grid-item:hover .overlay {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.671);
-  z-index: 2;
-  cursor: pointer;
-}
-section#projects div.content div.grid div.grid-item:hover .project-links {
-  position: absolute;
-  top: 35%;
-  display: block;
-  padding-top: 50px;
-  z-index: 3;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-}
-section#projects div.content div.grid div.grid-item:hover .project-links .website-link {
-  margin: 0;
-  background-color: #6b2ccf;
-  color: #fff;
-  width: 100px;
-  padding: 10px 30px;
-  margin-left: 20px;
-}
-section#projects div.content div.grid div.grid-item:hover .project-links .website-link a {
-  min-width: 50px;
-}
-section#projects div.content div.grid div.grid-item:hover .project-links .website-link:hover {
-  font-weight: 600;
-}
-section#projects div.content div.grid div.project-description {
+#projects .content .grid .project-description {
   font-weight: 300;
   font-size: 14px;
   margin-bottom: 50px;
 }
-section#projects div.content div.grid div.project-description p {
+#projects .content .grid .project-description p {
   text-align: left;
 }
-section#projects div.content div.grid div.project-description p span {
+#projects .content .grid .project-description p span {
   font-weight: 400;
 }
-section#projects div.content a {
+#projects .content a {
   margin: 0 auto;
   border: 2px solid #6b2ccf;
   border-radius: 40px;
@@ -241,20 +202,20 @@ section#projects div.content a {
   color: #6b2ccf;
   text-decoration: none;
 }
-section#projects div.content a:hover {
+#projects .content a:hover {
   background-color: #6b2ccf;
   color: #fff;
 }
 
-section#work div.content {
+#work .content {
   padding-top: 0;
 }
 
-section#contact {
+#contact {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-section#contact div.content {
+#contact .content {
   background-color: rgb(41, 52, 52);
   max-width: 900px;
   color: #fff;
@@ -263,27 +224,27 @@ section#contact div.content {
   margin: 0 auto;
   padding: 30px;
 }
-section#contact div.content h2 {
+#contact .content h2 {
   text-align: center;
   font-size: 30px;
 }
-section#contact div.content p {
+#contact .content p {
   text-align: center;
   font-weight: 300;
   padding-bottom: 50px;
 }
-section#contact div.content form {
+#contact .content form {
   text-align: center;
 }
-section#contact div.content form div {
+#contact .content form div {
   display: flex;
   max-width: 400px;
   margin: 0 auto;
 }
-section#contact div.content form div input {
+#contact .content form div input {
   width: 100%;
 }
-section#contact div.content form div input[type=text] {
+#contact .content form div input[type=text] {
   width: 100%;
   height: 45px;
   padding: 12px 20px;
@@ -293,25 +254,25 @@ section#contact div.content form div input[type=text] {
   border-radius: 40px;
   margin-bottom: 25px;
 }
-section#contact div.content form div input[type=text] ::-moz-placeholder {
+#contact .content form div input[type=text] ::-moz-placeholder {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
-section#contact div.content form div input[type=text] :-ms-input-placeholder {
+#contact .content form div input[type=text] :-ms-input-placeholder {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
-section#contact div.content form div input[type=text] ::placeholder {
+#contact .content form div input[type=text] ::placeholder {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
-section#contact div.content form div input[type=text]:focus {
+#contact .content form div input[type=text]:focus {
   border: 3px solid #ddd;
 }
-section#contact div.content form div > textarea {
+#contact .content form div > textarea {
   height: 100px;
   width: 100%;
   resize: none;
@@ -320,7 +281,7 @@ section#contact div.content form div > textarea {
   font-size: 13.5px;
   font-family: "Roboto", sans-serif;
 }
-section#contact div.content form div > button {
+#contact .content form div > button {
   margin: 0 auto;
   border: 2px solid #fff;
   border-radius: 40px;
@@ -333,7 +294,7 @@ section#contact div.content form div > button {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
-section#contact div.content form div > button:hover {
+#contact .content form div > button:hover {
   background-color: #fff;
   border: 2px solid #6b2ccf;
   color: #6b2ccf;
@@ -364,16 +325,11 @@ footer p {
     padding: 50px 20px 100px 20px;
     font-size: 18px;
   }
-  section#skills div.content div.grid {
+  #skills .content .grid {
     grid-template-columns: 1fr;
   }
-  section#skills div.content div.grid div.grid-item {
+  #skills .content .grid div.grid-item {
     width: 75%;
-  }
-  section#projects div.content div.grid {
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    grid-gap: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -387,13 +343,12 @@ footer p {
   section#skills div.content div.grid div.grid-item {
     width: 65%;
   }
-  section#projects div.content div.grid {
+  #projects .content .grid {
     margin: 0 auto;
-    grid-gap: 20px;
     padding-top: 30px;
   }
 }
-@media only screen and (min-width: 1119px) {
+@media only screen and (min-width: 1024px) {
   .hamburger {
     display: none;
   }
@@ -433,8 +388,47 @@ footer p {
     width: 70%;
   }
   section#projects div.content div.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
     margin: 0 auto;
-    grid-gap: 20px;
     padding-top: 30px;
+  }
+  section#projects div.content div.grid div.grid-item:hover .overlay {
+    position: absolute;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.795);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+  section#projects div.content div.grid div.grid-item:hover .project-links {
+    display: block;
+    position: absolute;
+    top: 35%;
+    padding-top: 50px;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section#projects div.content div.grid div.grid-item:hover .project-links .website-link {
+    margin: 0;
+    background-color: #6b2ccf;
+    color: #fff;
+    width: 100px;
+    padding: 10px 30px;
+    margin: 0 5px;
+  }
+  section#projects div.content div.grid div.grid-item:hover .project-links .website-link a {
+    min-width: 45px;
+  }
+  section#projects div.content div.grid div.grid-item:hover .project-links .website-link:hover {
+    font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */

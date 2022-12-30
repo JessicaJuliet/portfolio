@@ -10,7 +10,8 @@ body {
     background-color: #fff;
     position: fixed;
     z-index: 4;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    #hamburger-icon {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
+    #hamburger-icon {
         padding: 10px;
         z-index: 4;
         display: block;
@@ -76,10 +77,10 @@ body {
     }
 }
 
-section#intro {
+#intro {
     background-color: #6b2ccf;
     margin: 50px 0;
-    div.content {
+    .content {
         max-width: 700px;
         margin: 0 auto;
         color: #fff;
@@ -91,11 +92,11 @@ section#intro {
     }
 }
 
-section#skills {
+#skills {
     max-width: 80%;
     margin: 0 auto;
-    div.content {
-        div.grid {
+    .content {
+        .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 30px;
@@ -139,8 +140,8 @@ section#skills {
     }
 }
 
-section#projects {
-    div.content {
+#projects {
+    .content {
         padding-top: 80px;
         text-align: center;
         h2 {
@@ -155,22 +156,23 @@ section#projects {
             line-height: 1.5;
             font-size: 18px;
         }
-        div.grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 60px;
-            grid-row-gap: 40px;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
             margin: 0 auto;
             padding-top: 50px;
-            max-width: 70%;
-            div.grid-item {
-                position: relative;
-                border: .5px solid rgba(128, 128, 128, 0.322);
-                border-radius: 5px;
-                height: 100%;
-                width: auto;
-                overflow: hidden;
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            max-width: 85%;
+            .grid-item {
+                .project {
+                    position: relative;
+                    border: .5px solid rgba(128, 128, 128, 0.322);
+                    border-radius: 5px;
+                    height: 100%;
+                    width: auto;
+                    overflow: hidden;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
                 img {
                     position: relative;
                     object-fit: cover;
@@ -182,49 +184,8 @@ section#projects {
                 .project-links {
                     display: none;
                 }
-                &:hover {
-                    .overlay {
-                        position: absolute;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(0, 0, 0, 0.671);
-                        z-index: 2;
-                        cursor: pointer;
-                    }
-                    .project-links {
-                        position: absolute;
-                        top: 35%;
-                        display: block;
-                        padding-top: 50px;
-                        z-index: 3;
-                        color: #fff;
-                        text-align: center;
-                        width: 100%;
-                        margin: 0 auto;
-                        .website-link {
-                            margin: 0;
-                            background-color: #6b2ccf;
-                            color: #fff;
-                            width: 100px;
-                            padding: 10px 30px;
-                            margin-left: 20px;
-                            a {
-                                min-width: 50px;
-                            }
-                            &:hover {
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                } // end :hover
-
             } // end grid-item
-            div.project-description {
+            .project-description {
                 font-weight: 300;
                 font-size: 14px;
                 margin-bottom: 50px;
@@ -252,16 +213,16 @@ section#projects {
 }
 
 
-section#work {
-    div.content {
+#work {
+    .content {
         padding-top: 0;
     }
 }
 
-section#contact {
+#contact {
     padding-top: 80px;
     padding-bottom: 80px;
-    div.content {
+    .content {
         background-color: rgb(41, 52, 52);
         max-width: 900px;
         color: #fff;
@@ -358,7 +319,7 @@ footer {
 
 // Media Queries
 
-// Mobile screens, xs/s
+// Mobile screens, small
 @media only screen and (max-width: 480px) {
 
     #nav {
@@ -376,9 +337,9 @@ footer {
         }
     }
 
-    section#skills {
-        div.content {
-            div.grid {
+    #skills {
+        .content {
+            .grid {
                 grid-template-columns: 1fr;
                 div.grid-item {
                     width: 75%;
@@ -386,22 +347,11 @@ footer {
             }
         }
     }
-
-    section#projects {
-        div.content {
-            div.grid {
-                grid-template-columns: 1fr;
-                margin: 0 auto;
-                grid-gap: 20px;
-            }
-        }
-    }
-}
+} // end media query (extra small/ small)
 
 
 
-// Tablet screens, medium
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { // iPads, Tablets
 
     section#intro {
         div.content {
@@ -421,11 +371,10 @@ footer {
         }
     }
 
-    section#projects {
-        div.content {
-            div.grid {
+    #projects {
+        .content {
+            .grid {
                 margin: 0 auto;
-                grid-gap: 20px;
                 padding-top: 30px;
             }
         }
@@ -434,7 +383,7 @@ footer {
 
 
 
-@media only screen and (min-width: 1119px) {
+@media only screen and (min-width: 1024px) { // Small screens, laptops.
 
     .hamburger {
       display: none;
@@ -489,10 +438,63 @@ footer {
     section#projects {
         div.content {
             div.grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 40px;
                 margin: 0 auto;
-                grid-gap: 20px;
                 padding-top: 30px;
-            }
+                div.grid-item {
+                    &:hover { // Show on Desktop only
+                        .overlay {
+                            position: absolute;
+                            display: block;
+                            background-color: rgba(0, 0, 0, 0.795);
+                            // background-color: rgb(41, 52, 52);
+                            z-index: 2;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            cursor: pointer;
+                        }
+                        .project-links {
+                            display: block; // Show links on hover
+                            position: absolute;
+                            top: 35%;
+                            padding-top: 50px;
+                            z-index: 3;
+                            color: #fff;
+                            text-align: center;
+                            width: 100%;
+                            margin: 0 auto;
+                            .website-link {
+                                margin: 0;
+                                background-color: #6b2ccf;
+                                color: #fff;
+                                width: 100px;
+                                padding: 10px 30px;
+                                margin: 0 5px;
+                                a {
+                                    min-width: 45px;
+                                }
+                                &:hover {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    } // end :hover
+                }
+            } // end .grid
         }
     }
+} // end media query (large screens)
+
+
+@media only screen and (max-width: 1200px) { // Desktops, large screens
+
+}
+
+@media only screen and (min-width: 1201px) { // Extra large screens, TV.
+
 }
