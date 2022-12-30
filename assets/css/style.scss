@@ -383,7 +383,7 @@ footer {
 
 
 
-@media only screen and (min-width: 1024px) { // Small screens, laptops.
+@media only screen and (min-width: 1024px) { // Small screens, laptops
 
     .hamburger {
       display: none;
@@ -428,6 +428,8 @@ footer {
         div.content {
             div.grid {
                 grid-gap: 50px;
+                max-width: 1000px;
+                margin: 0 auto;
                 div.grid-item {
                     width: 70%;
                 }

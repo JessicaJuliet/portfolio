@@ -383,6 +383,8 @@ footer p {
   }
   section#skills div.content div.grid {
     grid-gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   section#skills div.content div.grid div.grid-item {
     width: 70%;
