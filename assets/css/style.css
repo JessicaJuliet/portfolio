@@ -95,13 +95,15 @@ body {
   max-width: 80%;
   margin: 0 auto;
 }
+#skills .content {
+  transform: translateY(-140px);
+  margin-bottom: -140px;
+}
 #skills .content .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   text-align: center;
-  transform: translateY(-140px);
-  margin-bottom: -140px;
   justify-items: center;
 }
 #skills .content .grid .grid-item {
