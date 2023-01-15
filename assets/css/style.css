@@ -384,6 +384,9 @@ footer p {
     margin-left: 30px;
     margin-bottom: 0;
   }
+  #nav .content a:hover {
+    text-decoration: underline;
+  }
   #header p br {
     display: block;
   }

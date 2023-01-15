@@ -415,6 +415,9 @@ footer {
                 font-weight: 600;
                 margin-left: 30px;
                 margin-bottom: 0;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
