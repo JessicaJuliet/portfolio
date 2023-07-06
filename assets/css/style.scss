@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     //color: #20839b;
+    color: #333;
 }
 
 .hamburger {
@@ -11,7 +12,7 @@ body {
     background-color: #fff;
     position: fixed;
     z-index: 4;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     #hamburger-icon {
         padding: 10px;
         z-index: 4;
@@ -65,12 +66,12 @@ body {
     h1 {
         font-size: 40px;
         // margin-top: 80px;
-        .period {
-            color: #20839b;
-            font-size: 100px;
-        }
         span {
             font-weight: 300;
+            &.period {
+                color: #20839b;
+                font-size: 100px;
+            }
         }
     }
     p {
@@ -96,17 +97,16 @@ body {
 }
 
 #intro {
-    background-color: #6b2ccf;
+    background-color: #e9f3f5;
     margin: 50px 0;
     .content {
         max-width: 700px;
         margin: 0 auto;
-        color: #fff;
-        padding-top: 80px;
+        // padding-top: 80px;
         padding-bottom: 150px;
         font-size: 20px;
         line-height: 1.5;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 
@@ -457,6 +457,22 @@ footer {
     #header {
 
     } // end #header
+
+
+    #intro {
+        .content {
+            h2 {
+                margin-top: 0;
+                span {
+                    font-weight: 300;
+                    &.period {
+                        color: #20839b;
+                        font-size: 100px;
+                    }
+                }
+            }
+        }
+    }
 
     section#skills {
         div.content {
