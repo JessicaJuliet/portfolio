@@ -96,6 +96,7 @@ body {
 #intro {
   background-color: #e9f3f5;
   margin: 50px 0;
+  height: 650px;
 }
 #intro .content {
   max-width: 700px;
@@ -111,8 +112,8 @@ body {
   margin: 0 auto;
 }
 #skills .content {
-  transform: translateY(-140px);
-  margin-bottom: -140px;
+  transform: translateY(-255px);
+  margin-bottom: -255px;
 }
 #skills .content .grid {
   display: grid;
@@ -122,27 +123,37 @@ body {
   justify-items: center;
 }
 #skills .content .grid .grid-item {
+  text-align: left;
   max-width: 400px;
   width: 70%;
   background-color: #fff;
   min-height: 430px;
   border: 0.5px solid rgba(207, 206, 206, 0.281);
   border-radius: 5px;
-  padding: 30px 60px;
+  padding: 50px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #skills .content .grid .grid-item h2 {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 #skills .content .grid .grid-item h3 {
   font-size: 20px;
-  color: #6b2ccf;
+  color: #20839b;
   font-weight: 400;
+  margin-top: 40px;
 }
 #skills .content .grid .grid-item p {
   font-size: 18px;
   line-height: 1.5;
+}
+#skills .content .grid .grid-item p.skill-description {
+  margin-top: 30px;
+  font-size: 16px;
+  border-left: 1.5px solid #20839b;
+  padding-left: 15px;
 }
 #skills .content .grid .grid-item ul {
   padding-left: 0;
@@ -151,7 +162,7 @@ body {
   list-style-type: none;
   padding-left: 0;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 #projects .content {
@@ -316,14 +327,14 @@ body {
 }
 
 footer {
-  background-color: #6b2ccf;
+  background-color: #333;
   text-align: center;
   padding-top: 150px;
   padding-bottom: 80px;
 }
 footer p {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.718);
+  color: #fff;
   text-align: center;
   font-weight: 300;
   padding-top: 20px;
@@ -399,13 +410,13 @@ footer p {
     text-decoration-color: #20839b;
     text-decoration-thickness: 2px;
   }
-  #nav .content a:nth-of-type(4) {
+  #nav .content a:nth-of-type(5) {
     color: #20839b;
     border: 2px solid #20839b;
     border-radius: 90px;
     padding: 10px;
   }
-  #nav .content a:nth-of-type(4):hover {
+  #nav .content a:nth-of-type(5):hover {
     text-decoration: none;
     background-color: #20839b;
     color: white;
@@ -421,7 +432,7 @@ footer p {
     font-size: 100px;
   }
   section#skills div.content div.grid {
-    grid-gap: 50px;
+    grid-gap: 10px;
     max-width: 1000px;
     margin: 0 auto;
   }

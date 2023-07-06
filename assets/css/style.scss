@@ -77,12 +77,16 @@ body {
     p {
         font-size: 20px;
         font-weight: 300;
+        // b {
+        //     color: #20839b;
+        // }
     }
     div {
         &.circle{
             width: 250px;
             height: 250px;
             border-radius: 50%;
+            // border: .01px solid #333;
             overflow: hidden;
             margin: 40px auto 20px auto;
             img {
@@ -99,6 +103,7 @@ body {
 #intro {
     background-color: #e9f3f5;
     margin: 50px 0;
+    height: 650px;
     .content {
         max-width: 700px;
         margin: 0 auto;
@@ -114,8 +119,8 @@ body {
     max-width: 80%;
     margin: 0 auto;
     .content {
-        transform: translateY(-140px);
-        margin-bottom: -140px; //off-set transform
+        transform: translateY(-255px);
+        margin-bottom: -255px; //off-set transform
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -123,26 +128,36 @@ body {
             text-align: center;
             justify-items: center;
             .grid-item {
+                text-align: left;
                 max-width: 400px;
                 width: 70%;
                 background-color: #fff;
                 min-height: 430px;
                 border: .5px solid rgba(207, 206, 206, 0.281);
                 border-radius: 5px;
-                padding: 30px 60px;
+                padding: 50px;
                 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 h2 {
                     font-weight: 600;
-                    font-size: 26px;
+                    font-size: 30px;
+                    margin-top: 0;
+                    margin-bottom: 40px;
                 }
                 h3 {
                     font-size: 20px;
-                    color: #6b2ccf;
+                    color: #20839b;
                     font-weight: 400;
+                    margin-top: 40px;
                 }
                 p {
                     font-size: 18px;
                     line-height: 1.5;
+                    &.skill-description {
+                        margin-top: 30px;
+                        font-size: 16px;
+                        border-left: 1.5px solid #20839b;
+                        padding-left: 15px;
+                    }
                 }
                 ul {
                     padding-left: 0;
@@ -150,7 +165,7 @@ body {
                         list-style-type: none;
                         padding-left: 0;
                         font-size: 18px;
-                        line-height: 1.5;
+                        line-height: 1.8;
                     }
                 }
             }
@@ -321,13 +336,13 @@ body {
 
 footer {
     // border-top: 20px solid #7e42df;
-    background-color: #6b2ccf;
+    background-color: #333;
     text-align: center;
     padding-top: 150px;
     padding-bottom: 80px;
     p {
         font-size: 18px;
-        color: rgba(255, 255, 255, 0.718);
+        color: #fff;
         text-align: center;
         font-weight: 300;
         padding-top: 20px;
@@ -439,7 +454,7 @@ footer {
                     text-decoration-color: #20839b;
                     text-decoration-thickness: 2px;
                 }
-                &:nth-of-type(4) {
+                &:nth-of-type(5) {
                     color: #20839b;
                     border: 2px solid #20839b;
                     border-radius: 90px;
@@ -477,7 +492,7 @@ footer {
     section#skills {
         div.content {
             div.grid {
-                grid-gap: 50px;
+                grid-gap: 10px;
                 max-width: 1000px;
                 margin: 0 auto;
                 div.grid-item {
