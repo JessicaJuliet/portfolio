@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    //color: #20839b;
 }
 
 .hamburger {
@@ -63,7 +64,7 @@ body {
     margin: 0 auto;
     h1 {
         font-size: 40px;
-        margin-top: 80px;
+        // margin-top: 80px;
         .period {
             color: #20839b;
             font-size: 100px;
@@ -412,7 +413,7 @@ footer {
     #nav {
         display: grid;
         padding-right: 30px;
-        margin-bottom: 100px;
+        margin-bottom: 0;
         div.overlay { // Hide overlay on desktop screens
             display: none;
             &.active {
@@ -434,17 +435,27 @@ footer {
                 margin-bottom: 0;
                 &:hover {
                     text-decoration: underline;
+                    text-underline-offset: 4px;
+                    text-decoration-color: #20839b;
+                    text-decoration-thickness: 2px;
+                }
+                &:nth-of-type(4) {
+                    color: #20839b;
+                    border: 2px solid #20839b;
+                    border-radius: 90px;
+                    padding: 10px;
+                    &:hover {
+                        text-decoration: none;
+                        background-color: #20839b;
+                        color: white;
+                    }
                 }
             }
         }
     }
 
     #header {
-        p {
-            br {
-                display: block;
-            }
-        }
+
     } // end #header
 
     section#skills {

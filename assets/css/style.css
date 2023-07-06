@@ -64,7 +64,6 @@ body {
 }
 #header h1 {
   font-size: 40px;
-  margin-top: 80px;
 }
 #header h1 .period {
   color: #20839b;
@@ -372,7 +371,7 @@ footer p {
   #nav {
     display: grid;
     padding-right: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
   #nav div.overlay {
     display: none;
@@ -397,9 +396,20 @@ footer p {
   }
   #nav .content a:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #20839b;
+    text-decoration-thickness: 2px;
   }
-  #header p br {
-    display: block;
+  #nav .content a:nth-of-type(4) {
+    color: #20839b;
+    border: 2px solid #20839b;
+    border-radius: 90px;
+    padding: 10px;
+  }
+  #nav .content a:nth-of-type(4):hover {
+    text-decoration: none;
+    background-color: #20839b;
+    color: white;
   }
   section#skills div.content div.grid {
     grid-gap: 50px;
