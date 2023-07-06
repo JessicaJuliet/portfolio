@@ -1,7 +1,7 @@
-@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   color: #333;
+  margin: 0;
 }
 
 .hamburger {
@@ -176,42 +176,29 @@ body {
 }
 #projects .content p {
   text-align: center;
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
   font-size: 18px;
 }
-#projects .content a.email {
-  color: #6b2ccf;
-}
 #projects .content .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   margin: 0 auto;
   padding-top: 50px;
-  max-width: 85%;
 }
 #projects .content .grid .grid-item .project {
   position: relative;
-  border: 0.5px solid rgba(128, 128, 128, 0.322);
-  border-radius: 5px;
-  height: 100%;
+  height: 300px;
   width: auto;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #projects .content .grid .grid-item .project a {
-  margin: 0 auto;
-  border: 2px solid ≈;
-  border-radius: 40px;
-  padding: 15px 30px;
-  color: #6b2ccf;
   text-decoration: none;
-}
-#projects .content .grid .grid-item .project a:hover {
-  background-color: #6b2ccf;
-  color: #fff;
 }
 #projects .content .grid .grid-item img {
   position: relative;
@@ -226,16 +213,16 @@ body {
 #projects .content .grid .grid-item .project-links {
   display: none;
 }
-#projects .content .grid .project-description {
-  font-weight: 300;
-  font-size: 14px;
-  margin-bottom: 50px;
-}
-#projects .content .grid .project-description p {
+#projects .content .grid .grid-item h3 {
   text-align: left;
-}
-#projects .content .grid .project-description p span {
-  font-weight: 400;
+  padding: 15px;
+  margin: 0;
+  background-color: #20839b;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 #work .content {
@@ -243,24 +230,21 @@ body {
 }
 
 #contact {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  background-color: #f8fbfc;
 }
 #contact .content {
-  background-color: rgb(41, 52, 52);
-  max-width: 900px;
-  color: #fff;
+  max-width: 500px;
+  color: #333;
   min-height: 150px;
   border-radius: 5px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 80px;
+  text-align: left;
 }
 #contact .content h2 {
-  text-align: center;
   font-size: 30px;
 }
 #contact .content p {
-  text-align: center;
   font-weight: 300;
   padding-bottom: 50px;
 }
@@ -269,7 +253,6 @@ body {
 }
 #contact .content form div {
   display: flex;
-  max-width: 400px;
   margin: 0 auto;
 }
 #contact .content form div input {
@@ -280,9 +263,9 @@ body {
   height: 45px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: none;
+  border: 0.5px solid #333;
   background-color: #fff;
-  border-radius: 40px;
+  border-radius: 10px;
   margin-bottom: 25px;
 }
 #contact .content form div input[type=text] ::-moz-placeholder {
@@ -302,19 +285,19 @@ body {
   height: 100px;
   width: 100%;
   resize: none;
-  border-radius: 25px;
+  border: 0.5px solid #333;
+  border-radius: 10px;
   padding: 12px 20px;
   font-size: 13.5px;
   font-family: "Roboto", sans-serif;
 }
 #contact .content form div > button {
-  margin: 0 auto;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 50px;
   color: #fff;
   text-decoration: none;
-  background-color: #6b2ccf;
+  background-color: #20839b;
   min-width: 100px;
   margin-top: 30px;
   font-family: "Roboto", sans-serif;
@@ -322,8 +305,8 @@ body {
 }
 #contact .content form div > button:hover {
   background-color: #fff;
-  border: 2px solid #6b2ccf;
-  color: #6b2ccf;
+  border: 2px solid #20839b;
+  color: #20839b;
 }
 
 footer {
@@ -439,13 +422,27 @@ footer p {
   section#skills div.content div.grid div.grid-item {
     width: 70%;
   }
-  section#projects div.content div.grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+  section#projects {
+    max-width: 1200px;
     margin: 0 auto;
-    padding-top: 30px;
   }
-  section#projects div.content div.grid div.grid-item:hover .overlay {
+  section#projects div.content h2 {
+    font-size: 30px;
+  }
+  section#projects div.content div.grid {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 30px;
+    margin: 0 auto;
+  }
+  section#projects div.content div.grid .grid-item {
+    height: 300px;
+  }
+  section#projects div.content div.grid .grid-item img {
+    margin-bottom: -4px;
+  }
+  section#projects div.content div.grid .grid-item :hover .overlay {
     position: absolute;
     display: block;
     background-color: rgba(0, 0, 0, 0.795);
@@ -458,7 +455,7 @@ footer p {
     bottom: 0;
     cursor: pointer;
   }
-  section#projects div.content div.grid div.grid-item:hover .project-links {
+  section#projects div.content div.grid .grid-item :hover .project-links {
     display: block;
     position: absolute;
     top: 35%;
@@ -469,18 +466,23 @@ footer p {
     width: 100%;
     margin: 0 auto;
   }
-  section#projects div.content div.grid div.grid-item:hover .project-links .website-link {
+  section#projects div.content div.grid .grid-item :hover .project-links .website-link {
     margin: 0;
-    background-color: #6b2ccf;
+    border: 2px solid #fff;
     color: #fff;
+    border-radius: 1px;
     width: 100px;
     padding: 10px 30px;
     margin: 0 5px;
   }
-  section#projects div.content div.grid div.grid-item:hover .project-links .website-link a {
+  section#projects div.content div.grid .grid-item :hover .project-links .website-link:nth-of-type(1) {
+    background-color: #fff;
+    color: #333;
+  }
+  section#projects div.content div.grid .grid-item :hover .project-links .website-link a {
     min-width: 45px;
   }
-  section#projects div.content div.grid div.grid-item:hover .project-links .website-link:hover {
+  section#projects div.content div.grid .grid-item :hover .project-links .website-link:hover {
     font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */

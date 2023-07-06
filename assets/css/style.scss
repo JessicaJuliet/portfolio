@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     //color: #20839b;
     color: #333;
+    margin: 0;
 }
 
 .hamburger {
@@ -102,6 +103,7 @@ body {
 
 #intro {
     background-color: #e9f3f5;
+    // background-color: #f8fbfc;
     margin: 50px 0;
     height: 650px;
     .content {
@@ -184,41 +186,27 @@ body {
         }
         p {
             text-align: center;
-            max-width: 400px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.5;
             font-size: 18px;
         }
-        a.email {
-            color: #6b2ccf;
-        }
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            grid-gap: 30px;
+            row-gap: 30px;
+            column-gap: 30px;
             margin: 0 auto;
             padding-top: 50px;
-            max-width: 85%;
             .grid-item {
                 .project {
                     position: relative;
-                    border: .5px solid rgba(128, 128, 128, 0.322);
-                    border-radius: 5px;
-                    height: 100%;
+                    height: 300px;
                     width: auto;
                     overflow: hidden;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                     a {
-                        margin: 0 auto;
-                        border: 2px solid ≈;
-                        border-radius: 40px;
-                        padding: 15px 30px;
-                        color: #6b2ccf;
                         text-decoration: none;
-                        &:hover {
-                            background-color: #6b2ccf;
-                            color: #fff;
-                        }
                     }
                 }
                 img {
@@ -232,18 +220,18 @@ body {
                 .project-links {
                     display: none;
                 }
-            } // end grid-item
-            .project-description {
-                font-weight: 300;
-                font-size: 14px;
-                margin-bottom: 50px;
-                p {
+                h3 {
                     text-align: left;
-                    span {
-                        font-weight: 400;
-                    }
+                    padding: 15px;
+                    margin: 0;
+                    background-color: #20839b;
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.06em;
                 }
-            }
+            } // end grid-item
         }
     }
 }
@@ -256,22 +244,20 @@ body {
 }
 
 #contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    background-color: #f8fbfc;
+    // padding-bottom: 80px;
     .content {
-        background-color: rgb(41, 52, 52);
-        max-width: 900px;
-        color: #fff;
+        max-width: 500px;
+        color: #333;
         min-height: 150px;
         border-radius: 5px;
         margin: 0 auto;
-        padding: 30px;
+        padding: 80px;
+        text-align: left;
         h2 {
-            text-align: center;
             font-size: 30px;
         }
         p {
-            text-align: center;
             font-weight: 300;
             padding-bottom: 50px;
         }
@@ -279,7 +265,6 @@ body {
             text-align: center;
             div {
                 display: flex;
-                max-width: 400px;
                 margin: 0 auto;
                 input {
                     width: 100%
@@ -289,9 +274,9 @@ body {
                     height: 45px;
                     padding: 12px 20px;
                     box-sizing: border-box;
-                    border: none;
+                    border: .5px solid #333;
                     background-color: #fff;
-                    border-radius: 40px;
+                    border-radius: 10px;
                     margin-bottom: 25px;
                     ::placeholder {
                         font-size: 12px;
@@ -306,27 +291,29 @@ body {
                     height: 100px;
                     width: 100%;
                     resize: none;
-                    border-radius: 25px;
+                    border: .5px solid #333;
+                    border-radius: 10px;
                     padding: 12px 20px;
                     font-size: 13.5px;
                     font-family: 'Roboto', sans-serif;
                 }
                 > button {
-                    margin: 0 auto;
-                    border: 2px solid #fff;
-                    border-radius: 40px;
-                    padding: 15px 30px;
+                    // margin: 0 auto;
+                    // border: 2px solid #fff;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 15px 50px;
                     color: #fff;
                     text-decoration: none;
-                    background-color: #6b2ccf;
+                    background-color: #20839b;
                     min-width: 100px;
                     margin-top: 30px;
                     font-family: 'Roboto', sans-serif;
                     font-size: 18px;
                     &:hover {
                         background-color: #fff;
-                        border: 2px solid #6b2ccf;
-                        color: #6b2ccf;
+                        border: 2px solid #20839b;
+                        color: #20839b;
                     }
                 }
             };
@@ -503,19 +490,27 @@ footer {
     } // end #skills
 
     section#projects {
+        max-width: 1200px;
+        margin: 0 auto;
         div.content {
+            h2 {
+                font-size: 30px;
+            }
             div.grid {
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 40px;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 30px;
+                row-gap: 30px;
                 margin: 0 auto;
-                padding-top: 30px;
-                div.grid-item {
-                    &:hover { // Show on Desktop only
+                .grid-item {
+                    height: 300px;
+                    img {
+                        margin-bottom: -4px;
+                    }
+                    :hover { // Show on Desktop only
                         .overlay {
                             position: absolute;
                             display: block;
                             background-color: rgba(0, 0, 0, 0.795);
-                            // background-color: rgb(41, 52, 52);
                             z-index: 2;
                             width: 100%;
                             height: 100%;
@@ -537,11 +532,17 @@ footer {
                             margin: 0 auto;
                             .website-link {
                                 margin: 0;
-                                background-color: #6b2ccf;
+                                // background-color: #fff;
+                                border: 2px solid #fff;
                                 color: #fff;
+                                border-radius: 1px;
                                 width: 100px;
                                 padding: 10px 30px;
                                 margin: 0 5px;
+                                &:nth-of-type(1) {
+                                    background-color: #fff;
+                                    color: #333;
+                                }
                                 a {
                                     min-width: 45px;
                                 }
