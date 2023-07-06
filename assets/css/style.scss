@@ -78,9 +78,10 @@ body {
     p {
         font-size: 20px;
         font-weight: 300;
-        // b {
-        //     color: #20839b;
-        // }
+        line-height: 1.5;
+        b {
+            color: #20839b;
+        }
     }
     div {
         &.circle{
@@ -175,7 +176,40 @@ body {
     }
 }
 
+#recent-work {
+    margin-top: 80px;
+    max-width: 1344px;
+    margin: 0 auto;
+    .content {
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 30px;
+            column-gap: 30px;
+            margin: 0 auto;
+            padding-top: 50px;
+            .grid-item {
+                height: 300px;
+                width: 100%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
 #projects {
+    max-width: 1344px;
+    margin: 0 auto;
     .content {
         padding-top: 80px;
         text-align: center;
@@ -201,7 +235,7 @@ body {
             .grid-item {
                 .project {
                     position: relative;
-                    height: 300px;
+                    height: 200px;
                     width: auto;
                     overflow: hidden;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -244,7 +278,7 @@ body {
 }
 
 #contact {
-    background-color: #f8fbfc;
+    background-color: #e9f3f5;
     // padding-bottom: 80px;
     .content {
         max-width: 500px;
@@ -444,7 +478,7 @@ footer {
                 &:nth-of-type(5) {
                     color: #20839b;
                     border: 2px solid #20839b;
-                    border-radius: 90px;
+                    border-radius: 4px;
                     padding: 10px;
                     &:hover {
                         text-decoration: none;
@@ -489,9 +523,26 @@ footer {
         }
     } // end #skills
 
+
+
+    #recent-work {
+        margin-top: 80px;
+        .content {
+            h2 {
+                font-size: 30px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 30px;
+
+            }
+        }
+    }
+
+
     section#projects {
-        max-width: 1200px;
-        margin: 0 auto;
+        margin-bottom: 130px;
         div.content {
             h2 {
                 font-size: 30px;
@@ -523,7 +574,7 @@ footer {
                         .project-links {
                             display: block; // Show links on hover
                             position: absolute;
-                            top: 35%;
+                            top: 50px;
                             padding-top: 50px;
                             z-index: 3;
                             color: #fff;
@@ -535,7 +586,7 @@ footer {
                                 // background-color: #fff;
                                 border: 2px solid #fff;
                                 color: #fff;
-                                border-radius: 1px;
+                                border-radius: 4px;
                                 width: 100px;
                                 padding: 10px 30px;
                                 margin: 0 5px;

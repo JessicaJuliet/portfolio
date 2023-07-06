@@ -76,6 +76,10 @@ body {
 #header p {
   font-size: 20px;
   font-weight: 300;
+  line-height: 1.5;
+}
+#header p b {
+  color: #20839b;
 }
 #header div.circle {
   width: 250px;
@@ -165,6 +169,41 @@ body {
   line-height: 1.8;
 }
 
+#recent-work {
+  margin-top: 80px;
+  max-width: 1344px;
+  margin: 0 auto;
+}
+#recent-work .content h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+#recent-work .content .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#recent-work .content .grid .grid-item {
+  height: 300px;
+  width: 100%;
+}
+#recent-work .content .grid .grid-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+#projects {
+  max-width: 1344px;
+  margin: 0 auto;
+}
 #projects .content {
   padding-top: 80px;
   text-align: center;
@@ -192,7 +231,7 @@ body {
 }
 #projects .content .grid .grid-item .project {
   position: relative;
-  height: 300px;
+  height: 200px;
   width: auto;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -230,7 +269,7 @@ body {
 }
 
 #contact {
-  background-color: #f8fbfc;
+  background-color: #e9f3f5;
 }
 #contact .content {
   max-width: 500px;
@@ -396,7 +435,7 @@ footer p {
   #nav .content a:nth-of-type(5) {
     color: #20839b;
     border: 2px solid #20839b;
-    border-radius: 90px;
+    border-radius: 4px;
     padding: 10px;
   }
   #nav .content a:nth-of-type(5):hover {
@@ -422,9 +461,20 @@ footer p {
   section#skills div.content div.grid div.grid-item {
     width: 70%;
   }
+  #recent-work {
+    margin-top: 80px;
+  }
+  #recent-work .content h2 {
+    font-size: 30px;
+  }
+  #recent-work .content .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
   section#projects {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 130px;
   }
   section#projects div.content h2 {
     font-size: 30px;
@@ -458,7 +508,7 @@ footer p {
   section#projects div.content div.grid .grid-item :hover .project-links {
     display: block;
     position: absolute;
-    top: 35%;
+    top: 50px;
     padding-top: 50px;
     z-index: 3;
     color: #fff;
@@ -470,7 +520,7 @@ footer p {
     margin: 0;
     border: 2px solid #fff;
     color: #fff;
-    border-radius: 1px;
+    border-radius: 4px;
     width: 100px;
     padding: 10px 30px;
     margin: 0 5px;
