@@ -76,6 +76,21 @@ body {
 #header p br {
   display: none;
 }
+#header .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#header .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
 
 #intro {
   background-color: #6b2ccf;
@@ -261,11 +276,6 @@ body {
   margin-bottom: 25px;
 }
 #contact .content form div input[type=text] ::-moz-placeholder {
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-}
-#contact .content form div input[type=text] :-ms-input-placeholder {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
