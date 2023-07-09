@@ -426,6 +426,8 @@ footer .content p {
     padding-bottom: 30px;
     padding-right: 30px;
     row-gap: 0;
+    max-width: 1344px;
+    margin: 0 auto;
   }
   #nav .content .grid {
     display: block;
