@@ -3,6 +3,20 @@ body {
   color: #333;
   margin: 0;
 }
+body section {
+  padding: 50px 15px 30px;
+}
+body h2 {
+  line-height: 1.5;
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+body p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
 
 .hamburger {
   height: 50px;
@@ -25,6 +39,7 @@ body {
   display: block;
   padding-right: 30px;
   margin-bottom: 100px;
+  margin-bottom: 0;
 }
 #nav .overlay {
   display: none;
@@ -57,38 +72,44 @@ body {
   margin-bottom: 3px;
 }
 
+span.period {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #20839b;
+}
+
 #header {
   text-align: center;
-  color: #141c3a;
   max-width: 500px;
   margin: 0 auto;
 }
-#header h1 {
-  font-size: 40px;
+#header .content .grid .grid-item h1 {
+  font-size: 30px;
+  line-height: 30px;
 }
-#header h1 span {
-  font-weight: 300;
-}
-#header h1 span.period {
-  color: #20839b;
-  font-size: 100px;
-}
-#header p {
-  font-size: 20px;
+#header .content .grid .grid-item p {
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
 }
-#header p b {
+#header .content .grid .grid-item p b {
   color: #20839b;
 }
-#header div.circle {
+#header .content .grid .grid-item p br {
+  display: none;
+}
+#header .content .grid .grid-item div.circle {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   overflow: hidden;
   margin: 40px auto 20px auto;
 }
-#header div.circle img {
+#header .content .grid .grid-item div.circle img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -101,20 +122,15 @@ body {
 
 #intro {
   background-color: #e9f3f5;
-  margin: 50px 0;
-  height: 650px;
 }
 #intro .content {
+  height: 350px;
   max-width: 700px;
   margin: 0 auto;
-  padding-bottom: 150px;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
+  padding-bottom: 90px;
 }
 
 #skills {
-  max-width: 80%;
   margin: 0 auto;
 }
 #skills .content {
@@ -123,43 +139,26 @@ body {
 }
 #skills .content .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-  text-align: center;
-  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 #skills .content .grid .grid-item {
-  text-align: left;
-  max-width: 400px;
   width: 70%;
+  margin: 0 auto;
+  text-align: left;
   background-color: #fff;
   min-height: 430px;
   border: 0.5px solid rgba(207, 206, 206, 0.281);
-  border-radius: 5px;
-  padding: 50px;
+  border-top-right-radius: 10px;
+  padding: 40px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-#skills .content .grid .grid-item h2 {
-  font-weight: 600;
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: 40px;
 }
 #skills .content .grid .grid-item h3 {
   font-size: 20px;
   color: #20839b;
   font-weight: 400;
-  margin-top: 40px;
-}
-#skills .content .grid .grid-item p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-#skills .content .grid .grid-item p.skill-description {
-  margin-top: 30px;
-  font-size: 16px;
-  border-left: 1.5px solid #20839b;
-  padding-left: 15px;
 }
 #skills .content .grid .grid-item ul {
   padding-left: 0;
@@ -167,23 +166,27 @@ body {
 #skills .content .grid .grid-item ul li {
   list-style-type: none;
   padding-left: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
 #recent-work {
-  margin-top: 80px;
-  max-width: 1344px;
   margin: 0 auto;
 }
+#recent-work .content {
+  text-align: left;
+}
+#recent-work .content h2, #recent-work .content p {
+  max-width: 700px;
+  margin: auto;
+}
 #recent-work .content h2 {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 600;
+  text-align: left;
+  margin-bottom: 30px;
 }
 #recent-work .content .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   row-gap: 30px;
   -moz-column-gap: 30px;
        column-gap: 30px;
@@ -191,7 +194,6 @@ body {
   padding-top: 50px;
 }
 #recent-work .content .grid .grid-item {
-  height: 300px;
   width: 100%;
 }
 #recent-work .content .grid .grid-item img {
@@ -199,49 +201,41 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
+  border-top-right-radius: 10px;
 }
 
-#projects {
+#learning-projects {
   max-width: 1344px;
   margin: 0 auto;
 }
-#projects .content {
-  padding-top: 80px;
-  text-align: center;
-}
-#projects .content h2 {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 600;
-}
-#projects .content p {
-  text-align: center;
+#learning-projects .content h2, #learning-projects .content p {
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.5;
-  font-size: 18px;
 }
-#projects .content .grid {
+#learning-projects .content h2 {
+  margin-bottom: 30px;
+}
+#learning-projects .content .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   row-gap: 30px;
   -moz-column-gap: 30px;
        column-gap: 30px;
   margin: 0 auto;
   padding-top: 50px;
 }
-#projects .content .grid .grid-item .project {
+#learning-projects .content .grid .grid-item .project {
   position: relative;
+  border-top-right-radius: 10px;
   height: 200px;
   width: auto;
   overflow: hidden;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-#projects .content .grid .grid-item .project a {
+#learning-projects .content .grid .grid-item .project a {
   text-decoration: none;
 }
-#projects .content .grid .grid-item img {
+#learning-projects .content .grid .grid-item img {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -251,10 +245,10 @@ body {
   -o-object-position: left;
      object-position: left;
 }
-#projects .content .grid .grid-item .project-links {
+#learning-projects .content .grid .grid-item .project-links {
   display: none;
 }
-#projects .content .grid .grid-item h3 {
+#learning-projects .content .grid .grid-item h3 {
   text-align: left;
   padding: 15px;
   margin: 0;
@@ -266,32 +260,17 @@ body {
   letter-spacing: 0.06em;
 }
 
-#work .content {
-  padding-top: 0;
-}
-
 #contact {
   background-color: #e9f3f5;
+  margin-top: 50px;
+  height: 230px;
 }
 #contact .content {
   max-width: 500px;
-  color: #333;
-  min-height: 150px;
-  border-radius: 5px;
   margin: 0 auto;
-  padding: 80px;
   text-align: left;
 }
-#contact .content h2 {
-  font-size: 30px;
-}
-#contact .content p {
-  font-weight: 300;
-  padding-bottom: 50px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-#contact .content p a {
+#contact .content a {
   color: #20839b;
   text-underline-offset: 4px;
 }
@@ -311,49 +290,13 @@ footer .content a :hover {
   transform: scale(1.1);
 }
 footer .content p {
-  font-size: 16px;
   color: #fff;
   text-align: center;
   font-weight: 300;
   padding-top: 20px;
-  line-height: 1.5;
   letter-spacing: 0.06em;
 }
 
-@media only screen and (max-width: 480px) {
-  #nav {
-    margin-bottom: 0;
-  }
-  section#header {
-    padding: 20px;
-  }
-  section#intro div.content {
-    padding: 50px 20px 100px 20px;
-    font-size: 18px;
-  }
-  #skills .content .grid {
-    grid-template-columns: 1fr;
-  }
-  #skills .content .grid div.grid-item {
-    width: 75%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  section#intro div.content {
-    padding: 50px 30px 120px 30px;
-    font-size: 18px;
-  }
-  section#skills div.content div.grid {
-    grid-template-columns: 1fr;
-  }
-  section#skills div.content div.grid div.grid-item {
-    width: 65%;
-  }
-  #projects .content .grid {
-    margin: 0 auto;
-    padding-top: 30px;
-  }
-}
 @media only screen and (min-width: 1024px) {
   .hamburger {
     display: none;
@@ -401,56 +344,70 @@ footer .content p {
     background-color: #20839b;
     color: white;
   }
-  #intro .content h2 {
-    margin-top: 0;
+}
+@media only screen and (min-width: 767px) {
+  #intro .content {
+    padding-bottom: 50px;
   }
-  #intro .content h2 span {
-    font-weight: 300;
-  }
-  #intro .content h2 span.period {
-    color: #20839b;
-    font-size: 100px;
-  }
-  section#skills div.content div.grid {
-    grid-gap: 10px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  section#skills div.content div.grid div.grid-item {
-    width: 70%;
+  #skills .content .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   #recent-work {
-    margin-top: 80px;
-  }
-  #recent-work .content h2 {
-    font-size: 30px;
+    max-width: 1344px;
   }
   #recent-work .content .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
   }
-  section#projects {
-    margin-bottom: 130px;
+  #recent-work .content .grid .grid-item:nth-of-type(1) {
+    grid-column: 1/span 1;
+    grid-row: 1/span 2;
   }
-  section#projects div.content h2 {
+  #recent-work .content .grid .grid-item:nth-of-type(2) {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+  }
+  #recent-work .content .grid .grid-item:nth-of-type(3) {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+  }
+  #learning-projects .content .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1119px) {
+  body section {
+    padding: 80px 15px 40px;
+  }
+  body h2 {
     font-size: 30px;
   }
-  section#projects div.content div.grid {
+  body p {
+    font-size: 18px;
+  }
+  #header .content .grid .grid-item h1 {
+    font-size: 40px;
+  }
+  #header .content .grid .grid-item p {
+    font-size: 20px;
+  }
+  #skills .content .grid .grid-item {
+    width: 80%;
+  }
+  #skills .content .grid .grid-item h3 {
+    font-weight: 500;
+  }
+  #skills .content .grid .grid-item ul li {
+    font-size: 18px;
+  }
+  #learning-projects .content .grid {
     grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 30px;
          column-gap: 30px;
     row-gap: 30px;
     margin: 0 auto;
   }
-  section#projects div.content div.grid .grid-item {
-    height: 300px;
-  }
-  section#projects div.content div.grid .grid-item img {
-    margin-bottom: -4px;
-  }
-  section#projects div.content div.grid .grid-item :hover .overlay {
+  #learning-projects .content .grid .grid-item:hover .overlay {
     transition: 0.2s ease;
     position: absolute;
     display: block;
@@ -462,9 +419,8 @@ footer .content p {
     left: 0;
     right: 0;
     bottom: 0;
-    cursor: pointer;
   }
-  section#projects div.content div.grid .grid-item :hover .project-links {
+  #learning-projects .content .grid .grid-item:hover .project-links {
     display: block;
     position: absolute;
     top: 50px;
@@ -475,7 +431,7 @@ footer .content p {
     width: 100%;
     margin: 0 auto;
   }
-  section#projects div.content div.grid .grid-item :hover .project-links .website-link {
+  #learning-projects .content .grid .grid-item:hover .project-links .website-link {
     margin: 0;
     border: 2px solid #fff;
     color: #fff;
@@ -485,12 +441,15 @@ footer .content p {
     margin: 0 5px;
     min-width: 45px;
   }
-  section#projects div.content div.grid .grid-item :hover .project-links .website-link:nth-of-type(1) {
+  #learning-projects .content .grid .grid-item:hover .project-links .website-link:nth-of-type(1) {
     background-color: #fff;
     color: #333;
   }
-  section#projects div.content div.grid .grid-item :hover .project-links .website-link:hover {
+  #learning-projects .content .grid .grid-item:hover .project-links .website-link:hover {
     transition: 0.05s ease;
     font-weight: 600;
+  }
+  #contact {
+    margin-top: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
