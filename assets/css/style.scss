@@ -324,8 +324,8 @@ footer {
 
 #project-header {
     .content {
-        max-width: 1344px;
-        margin: 0 auto;
+        max-width: 700px;
+        margin: 100px auto 0;
         h1 {
             font-size: 30px;
             position: relative;
@@ -337,8 +337,7 @@ footer {
             grid-template-columns: 1fr;
             .grid-item:nth-of-type(1) {
                 display: grid;
-                grid-template-columns: 45% auto;
-                grid-gap: 5px;
+                grid-template-columns: 30% auto;
                 p {
                     color: #20839b;
                     margin: 0;
@@ -355,6 +354,8 @@ footer {
 
 #project-description {
     padding-top: 20px;
+    max-width: 700px;
+    margin: 0 auto;
     .content {
         max-width: 1344px;
         margin: 0 auto;
@@ -363,9 +364,9 @@ footer {
 
 #project-images {
     padding-top: 0;
+    max-width: 700px;
+    margin: 0 auto;
     .content {
-        max-width: 1344px;
-        margin: 0 auto;
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -373,7 +374,7 @@ footer {
             .grid-item {
                 img {
                     width: 100%;
-                    height: 250px;
+                    height: 500px;
                     object-fit: cover;
                 }
             }
@@ -383,10 +384,8 @@ footer {
 
 #project-links {
     padding-top: 0;
-    .content {
-        max-width: 1344px;
-        margin: 0 auto;
-    }
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 
@@ -636,24 +635,15 @@ footer {
 
     // ------------- Project styles ------------- //
 
-    #project-header {
-        .content {
-            .grid {
-                grid-template-columns: 30% auto;
-            }
-        }
-    }
-
     #project-description {
         .content {
             .grid {
                 display: grid;
-                column-gap: 100px;
                 .grid-item {
-                    margin-bottom: 30px;
+                    // margin-bottom: 20px;
                     max-width: 700px;
                     h2 {
-                        font-size: 25px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -665,8 +655,7 @@ footer {
         .content {
             .grid {
                 grid-template-columns: 1fr 1fr;
-                column-gap: 30px;
-                max-width: 900px;
+                column-gap: 20px;
             }
         }
     }
