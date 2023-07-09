@@ -40,6 +40,7 @@ body p {
   margin-bottom: 100px;
   margin-bottom: 0;
   display: none;
+  box-shadow: 0 1px 5px 0 rgba(45, 62, 80, 0.12);
 }
 #nav.active {
   display: block;
@@ -301,6 +302,69 @@ footer .content p {
   letter-spacing: 0.06em;
 }
 
+#project-header .content {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+#project-header .content h1 {
+  font-size: 30px;
+  position: relative;
+  height: 100%;
+  line-height: 1.5;
+}
+#project-header .content .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#project-header .content .grid .grid-item:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 45% auto;
+  grid-gap: 5px;
+}
+#project-header .content .grid .grid-item:nth-of-type(1) p {
+  color: #20839b;
+  margin: 0;
+  grid-column: 1/span 1;
+}
+#project-header .content .grid .grid-item:nth-of-type(1) p span {
+  grid-column: 2/span 1;
+}
+
+#project-description {
+  padding-top: 20px;
+}
+#project-description .content {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+#project-images {
+  padding-top: 0;
+}
+#project-images .content {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+#project-images .content .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+#project-images .content .grid .grid-item img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#project-links {
+  padding-top: 0;
+}
+#project-links .content {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 767px) {
   #intro .content {
     padding-bottom: 50px;
@@ -343,6 +407,10 @@ footer .content p {
   }
   #nav {
     display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 20;
+    width: 100%;
     padding-right: 30px;
     margin-bottom: 0;
   }
@@ -457,5 +525,26 @@ footer .content p {
   }
   #contact {
     margin-top: 80px;
+  }
+  #project-header .content .grid {
+    grid-template-columns: 30% auto;
+  }
+  #project-description .content .grid {
+    display: grid;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+  #project-description .content .grid .grid-item {
+    margin-bottom: 30px;
+    max-width: 700px;
+  }
+  #project-description .content .grid .grid-item h2 {
+    font-size: 25px;
+  }
+  #project-images .content .grid {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    max-width: 900px;
   }
 }/*# sourceMappingURL=style.css.map */
