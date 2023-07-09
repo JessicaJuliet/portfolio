@@ -1,21 +1,23 @@
 // Index js
 
+
+
+const screenWidth = screen.width;
+const nav = document.getElementById("nav");
 const hamburgerIcon = document.getElementById("hamburger-icon");
-var navMenu = document.querySelector("#nav div.overlay");
-var navItems = document.querySelector("nav .content");
-var navItem = document.querySelectorAll(".nav-item");
+const navOverlay = document.querySelector(".nav-overlay");
+var navItems = document.querySelectorAll(".nav-item");
 
 
-// Toggle nav menu
 hamburgerIcon.addEventListener("click", function() {
-  navMenu.classList.toggle("active");
-  navItems.classList.toggle("active");
+  nav.classList.toggle("active")
+  navOverlay.classList.toggle("active");
 })
 
 // Close nav menu on link click
-for (let i = 0; i < navItem.length; i++){
-  // console.log(i);
-  navItem[i].addEventListener("click", function() {
-    navMenu.classList.toggle("active"); 
+for (let i = 0; i < navItems.length; i++){
+  navItems[i].addEventListener("click", function() {
+    nav.classList.remove("active")
+    navOverlay.classList.remove("active");
   })
 }
