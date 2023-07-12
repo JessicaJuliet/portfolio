@@ -203,7 +203,7 @@ span.period {
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
             row-gap: 30px;
             column-gap: 30px;
             margin: 0 auto;
@@ -211,12 +211,14 @@ span.period {
             .grid-item {
                 position: relative;
                 width: 100%;
-                .overlay {
+                height: 350px;
+                .recent-overlay {
                     background-color: #333333a7;
                     position: absolute;
                     height: 100%;
                     width: 100%;
-                    z-index: 1;
+                    top: 0;
+                    bottom: 0;
                     &:hover {
                         transition: .2s ease-in;
                         background-color: #333333df;
@@ -233,16 +235,6 @@ span.period {
                         letter-spacing: 0.06em;
                         font-size: 25px;
                     }
-                    // .underline {
-                    //     position: absolute;
-                    //     border-color: 2px solid white;
-                    //     margin: 0 auto;
-                    //     right: 0;
-                    //     left: 0;
-                    //     top: 53%;
-                    //     border-bottom: 2px solid #20839b;
-                    //     width: 50%;
-                    // }
                 }
                 img {
                     height: 100%;
@@ -427,6 +419,9 @@ footer {
                     max-height: 500px;
                     object-fit: cover;
                     &.blog {
+                        grid-column: 1/ span 2;
+                    }
+                    &.store {
                         grid-column: 1/ span 2;
                     }
                 }
