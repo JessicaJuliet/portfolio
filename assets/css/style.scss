@@ -16,6 +16,9 @@ body {
         line-height: 1.5;
         font-weight: 300;
     }
+    hr {
+        max-width: 700px;
+    }
 }
 
 .hamburger {
@@ -206,7 +209,41 @@ span.period {
             margin: 0 auto;
             padding-top: 50px;
             .grid-item {
+                position: relative;
                 width: 100%;
+                .overlay {
+                    background-color: #333333a7;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1;
+                    &:hover {
+                        transition: .2s ease-in;
+                        background-color: #333333df;
+                    }
+                    h2 {
+                        color: white;
+                        position: absolute;
+                        text-align: center;
+                        margin: 0 auto;
+                        right: 0;
+                        left: 0;
+                        top: 45%;
+                        text-transform: uppercase;
+                        letter-spacing: 0.06em;
+                        font-size: 25px;
+                    }
+                    // .underline {
+                    //     position: absolute;
+                    //     border-color: 2px solid white;
+                    //     margin: 0 auto;
+                    //     right: 0;
+                    //     left: 0;
+                    //     top: 53%;
+                    //     border-bottom: 2px solid #20839b;
+                    //     width: 50%;
+                    // }
+                }
                 img {
                     height: 100%;
                     width: 100%;
@@ -357,30 +394,47 @@ footer {
     max-width: 700px;
     margin: 0 auto;
     .content {
-        max-width: 1344px;
         margin: 0 auto;
-    }
-}
-
-#project-images {
-    padding-top: 0;
-    max-width: 700px;
-    margin: 0 auto;
-    .content {
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 30px;
-            .grid-item {
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .grid-item {
+            ul li {
+                a {
+                    color: #333;
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                    font-weight: 350;
+                    font-size: 16px;
+                    font-family: 'Roboto', sans-serif;
+                    &:hover {
+                        transition: .2s ease;
+                        text-underline-offset: 7px;
+                        color: #20839b;
+                    }
+                }
+            }
+        }
+        .grid-item.visuals {
+            .inner-grid-item {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+                column-gap: 30px;
                 img {
-                    width: 100%;
-                    height: 500px;
+                    max-width: 100%;
+                    max-height: 500px;
                     object-fit: cover;
+                    &.blog {
+                        grid-column: 1/ span 2;
+                    }
                 }
             }
         }
     }
 }
+
 
 #project-links {
     padding-top: 0;
@@ -640,25 +694,28 @@ footer {
             .grid {
                 display: grid;
                 .grid-item {
-                    // margin-bottom: 20px;
-                    max-width: 700px;
                     h2 {
                         font-size: 20px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .grid-item.visuals {
+                    .inner-grid-item {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        img {
+                            display: inline-flex;
+                            height: 100%;
+                            column-gap: 20px;
+                            row-gap: 20px;
+                        }
                     }
                 }
             }
         }
     } // end #project-description
-
-
-    #project-images {
-        .content {
-            .grid {
-                grid-template-columns: 1fr 1fr;
-                column-gap: 20px;
-            }
-        }
-    }
 
 
 
