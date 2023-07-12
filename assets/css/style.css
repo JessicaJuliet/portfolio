@@ -423,6 +423,9 @@ footer .content p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 250px;
   }
+  #recent-work .content .grid .grid-item {
+    height: 100%;
+  }
   #recent-work .content .grid .grid-item:nth-of-type(1) {
     grid-column: 1/span 1;
     grid-row: 1/span 2;
