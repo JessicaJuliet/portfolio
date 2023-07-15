@@ -6,11 +6,18 @@ body {
 body section {
   padding: 50px 15px 30px;
 }
+body section .content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 body h2 {
   line-height: 1.5;
-  font-size: 25px;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 30px;
+}
+body h3 {
+  font-size: 18px;
 }
 body p {
   font-size: 16px;
@@ -132,39 +139,37 @@ span.period {
   background-color: #e9f3f5;
 }
 #intro .content {
-  height: 350px;
+  height: 400px;
+}
+#intro .content h2, #intro .content p {
   max-width: 700px;
-  margin: 0 auto;
-  padding-bottom: 90px;
 }
 
 #skills {
   margin: 0 auto;
 }
 #skills .content {
-  transform: translateY(-255px);
-  margin-bottom: -255px;
+  transform: translateY(-160px);
+  margin-bottom: -160px;
 }
 #skills .content .grid {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(1, 1fr);
-  max-width: 1000px;
   margin: 0 auto;
 }
 #skills .content .grid .grid-item {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: left;
   background-color: #fff;
   min-height: 430px;
   border: 0.5px solid rgba(207, 206, 206, 0.281);
   border-top-right-radius: 10px;
-  padding: 40px;
+  padding: 35px 25px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #skills .content .grid .grid-item h3 {
-  font-size: 20px;
   color: #20839b;
   font-weight: 400;
 }
@@ -184,13 +189,12 @@ span.period {
 #recent-work .content {
   text-align: left;
 }
-#recent-work .content h2, #recent-work .content p {
-  max-width: 700px;
-  margin: auto;
-}
 #recent-work .content h2 {
   text-align: left;
   margin-bottom: 30px;
+}
+#recent-work .content h2, #recent-work .content p {
+  max-width: 700px;
 }
 #recent-work .content .grid {
   display: grid;
@@ -199,7 +203,7 @@ span.period {
   -moz-column-gap: 30px;
        column-gap: 30px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 #recent-work .content .grid .grid-item {
   position: relative;
@@ -218,17 +222,19 @@ span.period {
   transition: 0.2s ease-in;
   background-color: rgba(51, 51, 51, 0.8745098039);
 }
-#recent-work .content .grid .grid-item .recent-overlay h2 {
+#recent-work .content .grid .grid-item .recent-overlay h3 {
   color: white;
   position: absolute;
   text-align: center;
   margin: 0 auto;
+  padding: 15px;
   right: 0;
   left: 0;
   top: 45%;
+  line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 25px;
+  font-size: 20px;
 }
 #recent-work .content .grid .grid-item img {
   height: 100%;
@@ -239,15 +245,13 @@ span.period {
 }
 
 #learning-projects {
-  max-width: 1344px;
-  margin: 0 auto;
-}
-#learning-projects .content h2, #learning-projects .content p {
-  max-width: 700px;
   margin: 0 auto;
 }
 #learning-projects .content h2 {
   margin-bottom: 30px;
+}
+#learning-projects .content h2, #learning-projects .content p {
+  max-width: 700px;
 }
 #learning-projects .content .grid {
   display: grid;
@@ -256,7 +260,7 @@ span.period {
   -moz-column-gap: 30px;
        column-gap: 30px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 #learning-projects .content .grid .grid-item:active .overlay {
   position: absolute;
@@ -338,16 +342,19 @@ span.period {
 #contact {
   background-color: #e9f3f5;
   margin-top: 50px;
-  height: 230px;
+  height: auto;
 }
 #contact .content {
-  max-width: 500px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 #contact .content a {
   color: #20839b;
   text-underline-offset: 4px;
+}
+#contact .content a:hover {
+  transition: 0.2s ease;
+  text-underline-offset: 7px;
 }
 
 footer {
@@ -450,15 +457,28 @@ footer .content p {
   margin: 0 auto;
 }
 
+@media only screen and (min-width: 450px) {
+  #learning-projects .content .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #learning-projects .content .grid .grid-item h3 {
+    height: 40px;
+  }
+  #skills .content {
+    transform: translateY(-220px);
+    margin-bottom: -220px;
+  }
+}
 @media only screen and (min-width: 767px) {
   #intro .content {
     padding-bottom: 50px;
   }
+  #skills .content {
+    transform: translateY(-290px);
+    margin-bottom: -290px;
+  }
   #skills .content .grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  #recent-work {
-    max-width: 1344px;
   }
   #recent-work .content .grid {
     grid-template-columns: 1fr 1fr;
@@ -555,8 +575,11 @@ footer .content p {
   #header .content .grid .grid-item p {
     font-size: 20px;
   }
+  #skills .content .grid {
+    grid-gap: 100px;
+  }
   #skills .content .grid .grid-item {
-    width: 80%;
+    width: 100%;
   }
   #skills .content .grid .grid-item h3 {
     font-weight: 500;
@@ -600,10 +623,11 @@ footer .content p {
     border: 2px solid #fff;
     color: #fff;
     border-radius: 4px;
-    width: 100px;
-    padding: 10px 30px;
     margin: 0 5px;
-    min-width: 45px;
+    width: 80px;
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-block;
   }
   #learning-projects .content .grid .grid-item:hover .project-links .website-link:nth-of-type(1) {
     background-color: #fff;
